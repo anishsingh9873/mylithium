@@ -21,6 +21,7 @@ router.post("/deleteBooks", BookController.deleteBooks)
 
 //MOMENT JS
 const moment = require('moment');
+const bookModel = require('../models/bookModel');
 router.get("/dateManipulations", function (req, res) {
     
     // const today = moment();
@@ -35,7 +36,12 @@ router.get("/dateManipulations", function (req, res) {
     let x= dateB.diff(dateA, "days")
     console.log(x)
 
+
     res.send({ msg: "all good"})
+
 })
 
 module.exports = router;
+
+
+
