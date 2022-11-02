@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const route = require('./routes/route.js');
 const mongoose = require('mongoose');
+const { mid3 } = require('./middleware/commonmid.js');
 const app = express();
 
 app.use(bodyParser.json());
@@ -16,12 +17,7 @@ mongoose.connect("mongodb+srv://anishsingh9873:hsina654321@mycluster.t2etkrj.mon
 
 
 //This is a globle middleware
-app.use(
-    function(req,res,next){
-        console.log('Global Middleware')
-        next()
-    }
-)
+app.use(mid3)
 
 
 app.use('/', route);

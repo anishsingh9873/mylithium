@@ -19,8 +19,9 @@ const mid2=function(req,res,next){
 }
 
 const mid3=function(req,res,next){
-    console.log('Mid3')
-    
+    const a=req.ip
+    const path=req.originalUrl
+    console.log('Mid3',new Date(),a,path)
     next()
 }
 

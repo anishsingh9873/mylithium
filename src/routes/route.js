@@ -25,5 +25,5 @@ router.get('/books',databook.book)
 
 
 
-router.get('/basic',midall.mid1,midall.mid2,midall.mid3,user.basic)
+router.get('/basic',midall.mid1,user.basic)
 module.exports = router;
