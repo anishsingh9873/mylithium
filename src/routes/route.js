@@ -24,4 +24,6 @@ router.post('/studentlogin',data.login)
 router.get('/student/:studentId',data.getstudent)
 router.get('/del/:studentId',data.delet)
 
+
+
 module.exports = router;
