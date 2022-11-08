@@ -14,7 +14,8 @@ const data = new student.Schema({
         enum: ["male", "female", "other"]
     },
 	isDeleted: false, 
-    age : Number
+    age : Number,
+    //posts: {type: [], deafult: []}
 },{timestamps:true})
 
 module.exports=student.model('Student',data)

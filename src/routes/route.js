@@ -4,6 +4,8 @@ const userController= require("../controllers/userController")
 
 const data=require('../controllers/assig')
 
+const cowin=require('../controllers/cowin')
+
 router.get("/test-me", function (req, res) {
     res.send("My first ever api!")
 })
@@ -25,5 +27,11 @@ router.get('/student/:studentId',data.getstudent)
 router.get('/del/:studentId',data.delet)
 
 
+router.post("/student/:userId/posts", data.post)
+
+
+
+router.get('/cowin/states',cowin.getstates)
+router.get('/cowin/districtinstates/:statesId',cowin.district)
 
 module.exports = router;
